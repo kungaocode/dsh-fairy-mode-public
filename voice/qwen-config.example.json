@@ -1,0 +1,6 @@
+{
+  "model": "qwen-audio-3.0-realtime-plus",
+  "endpoint": "wss://token-plan.cn-beijing.maas.aliyuncs.com/api-ws/v1/realtime",
+  "apiKey": "REPLACE_WITH_LOCAL_TOKEN_PLAN_KEY",
+  "voice": "REPLACE_WITH_YOUR_REALTIME_VOICE_ID"
+}

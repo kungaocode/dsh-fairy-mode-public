@@ -1,0 +1,33 @@
+# Voice weights are supplied locally.
+*.pth
+*.ckpt
+logs/
+node_modules/
+
+# Local API instructions can contain credentials. Never publish them.
+api[-_]qwen*.txt
+api[-_]keys*.txt
+.env
+.env.*
+!.env.example
+local-artifacts/
+*.m4a
+*.M4A
+fairy-qwen.json
+*.local.json
+# New voice references and generated auditions remain local.
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.aac
+*.selection
+*.pem
+*.p12
+*.pfx
+__pycache__/
+*.py[cod]
+enrollment.json
+corpus.json
+*-result.json
+tts_infer_fairy.yaml

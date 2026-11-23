@@ -1,0 +1,61 @@
+{
+  "name": "dsh-fairy-mode",
+  "version": "1.5.2",
+  "type": "module",
+  "description": "Fairy for DeepSeek Harness: HDD skin, animated mascot, boot animation, persistent tone and quote-reference toggles, and a Harness-powered web retrieval console and tool.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "persona"
+  ],
+  "scripts": {
+    "smoke": "node scripts/client-smoke.mjs",
+    "test:voice": "node --test scripts/qwen-voice-smoke.mjs scripts/voice-cleanup-smoke.mjs",
+    "test:hdd": "node --test scripts/hdd-switch-smoke.mjs",
+    "test:voice:live": "node scripts/qwen-voice-live.mjs --live"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "persona.js",
+    "search.js",
+    "http.js",
+    "qwen-voice.js",
+    "prompts",
+    "references",
+    "HANDOFF.md",
+    "NOTICE.md",
+    "docs",
+    "cordis.patch.yml",
+    "boot.mp4",
+    "boot-field.png",
+    "scripts/*.mjs",
+    "scripts/*.py",
+    "scripts/*.ps1",
+    "scripts/*.template",
+    "voice/qwen-config.example.json",
+    "voice/tts_infer_fairy.yaml.template"
+  ],
+  "dependencies": {
+    "ws": "^8.22.1"
+  }
+}

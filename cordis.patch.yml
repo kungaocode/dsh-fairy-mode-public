@@ -1,0 +1,6 @@
+# One host row loads the Fairy skin, dynamic tone, and Harness web retrieval.
+# Keep the user's selected preset and tool composition. Tone starts disabled
+# and is controlled by /hdd-persona, without a second agent preset.
+- insert:
+    - id: hdd-overlay
+      name: 'dsh-fairy-mode'
